@@ -48,16 +48,28 @@ export const SearchContainer = styled.div`
 `;
 
 export const PostContainer = styled.main`
-margin-top: 3rem;
+  margin-top: 3rem;
+
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 `;
 
-export const PostBox = styled.div`
+export const PostBox = styled.a`
   width: 26rem;
-  /* height: 16.25rem; */
+  height: 16.25rem;
+  cursor: pointer;
+
+  border: 2px solid transparent;
+  transition: all 0.8s;
 
   border-radius: 10px;
   padding: 2rem;
   background-color: ${({ theme }) => theme["base-post"]};
+
+  :hover {
+    border-color: ${({ theme }) => theme["base-label"]};
+  }
 
   div {
     display: flex;
@@ -65,19 +77,23 @@ export const PostBox = styled.div`
     justify-content: space-between;
 
     strong {
-        color: ${({ theme }) => theme["base-title"]};
-        font-size: 1.25rem;
+      color: ${({ theme }) => theme["base-title"]};
+      font-size: 1.25rem;
     }
-    
+
     span {
-        color: ${({ theme }) => theme["base-span"]};
-        font-size: 0.875rem;
+      color: ${({ theme }) => theme["base-span"]};
+      font-size: 0.875rem;
     }
   }
 
   p {
     margin-top: 1rem;
     color: ${({ theme }) => theme["base-text"]};
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
   }
 `;
