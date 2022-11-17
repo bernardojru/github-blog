@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const SearchContainer = styled.div`
@@ -55,10 +56,11 @@ export const PostContainer = styled.main`
   grid-template-columns: repeat(2, 1fr);
 `;
 
-export const PostBox = styled.a`
+export const PostBox = styled(Link)`
   width: 26rem;
   height: 16.25rem;
   cursor: pointer;
+  text-decoration: none;
 
   border: 2px solid transparent;
   transition: all 0.8s;

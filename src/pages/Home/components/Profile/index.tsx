@@ -23,7 +23,7 @@ interface Users {
   name: string;
   login: string;
   avatar_url: string;
-  location: string | null;
+  company: string
   bio: string;
   followers: number;
 }
@@ -60,7 +60,7 @@ export function Profile() {
             </div>
             <div>
               <FontAwesomeIcon icon={faBuilding} />
-              <span>{profile?.location}</span>
+              <span>{profile?.company}</span>
             </div>
             <div>
               <FontAwesomeIcon icon={faUserGroup} />
