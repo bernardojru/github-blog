@@ -73,6 +73,11 @@ export const Tags = styled.div`
       border-bottom-color: ${({ theme }) => theme.blue};
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const Bio = styled.div`
@@ -95,5 +100,11 @@ export const Info = styled.div`
     span {
       color: ${({ theme }) => theme["base-subtitle"]};
     }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
   }
 `;

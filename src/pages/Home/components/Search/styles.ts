@@ -54,6 +54,11 @@ export const PostContainer = styled.main`
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items:center ;
+  }
 `;
 
 export const PostBox = styled(Link)`
